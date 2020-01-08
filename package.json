@@ -5,12 +5,9 @@
   "main": "index.js",
   "homepage": "http://lalitdhiman1.github.io/shopping-cart-assignment",
   "scripts": {
-    "start": "webpack --hot --inline",
+    "start": "webpack -p --config ./webpack.prod.config.js",
     "build:dev": "webpack --config ./webpack.dev.config.js",
-    "build": "webpack -p --config ./webpack.prod.config.js",
-    "test": "mocha -w src/testSetup.js \"src/**/*.test.js\" --require ignore-styles",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "webpack -p --config ./webpack.prod.config.js"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +30,7 @@
     "redux": "^4.0.5",
     "uglifyjs-webpack-plugin": "^1.2.0",
     "webpack": "^3.10.0"
+    
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
@@ -43,13 +41,6 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.18.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1",
-    "eslint-plugin-react-redux": "^2.1.0",
     "expect": "^22.4.0",
     "file-loader": "^1.1.9",
     "ignore-styles": "^5.0.1",
