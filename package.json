@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Assignment adobe",
   "main": "index.js",
-  "scripts": {
+  "scripts": { 
     "start": "webpack -p",
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "build": "webpack -p --config ./webpack.prod.config.js",
