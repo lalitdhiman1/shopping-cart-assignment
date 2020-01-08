@@ -56,10 +56,15 @@
 				border-bottom: none;
 				display: inline;
 			}
-			button.apply__button {
+			button.apply__button.mobile {
 				border-right: none;
 				border-bottom: none;
 				display: inline;
+			}
+			button.apply__button.desktop {
+				border-right: none;
+				border-bottom: none;
+				display: none;
 			}
 		}
 	}

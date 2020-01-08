@@ -42,15 +42,22 @@ function RangeSlider(props) {
         let filterdata = props.productList.filter(_data =>  _data.price >= minVal);
             filterdata = filterdata.filter(_data =>  _data.price <= mxnVal); 
             props.handleRangeSlider(filterdata);
+     }
+     const onApplyClickMobile =()=>{
+        const minVal = document.querySelector("#minValue").value; 
+        const mxnVal = document.querySelector("#maxValue").value;
+        let filterdata = props.productList.filter(_data =>  _data.price >= minVal);
+            filterdata = filterdata.filter(_data =>  _data.price <= mxnVal); 
+            props.handleRangeSlider(filterdata);
             props.mobileCloseLeftPanel()
      }
-
     return (
             <React.Fragment>
                 <div id="rangeSliderDiv"></div>
                 
                 <button onClick={()=>props.mobileCloseLeftPanel()} className="cancel__button">Cancel</button>
-                <button onClick={()=>onApplyClick()} className="apply__button">Apply</button>
+                <button onClick={()=>onApplyClickMobile()} className="apply__button mobile">Apply</button>
+                <button onClick={()=>onApplyClick()} className="apply__button desktop">Apply</button>
             </React.Fragment>
 
     )

@@ -16,11 +16,20 @@ function Sorting(props) {
     
       const sorting = (_filter)=>{
         if(_filter==="desc"){
-          props.productList.sort(compare('price')).reverse()       
+          props.productList.sort(compare('price')).reverse();
+          document.querySelector('.price__highlow').classList.add("select")       
+          document.querySelector('.price__lowhigh').classList.remove("select")       
+          document.querySelector('.price__discount').classList.remove("select")       
         }else if(_filter==="asc"){
-          props.productList.sort(compare('price'))       
+          props.productList.sort(compare('price'))
+          document.querySelector('.price__highlow').classList.remove("select")       
+          document.querySelector('.price__lowhigh').classList.add("select")       
+          document.querySelector('.price__discount').classList.remove("select")       
         }else if(_filter==="discount"){
-          props.productList.sort(compare('discount')).reverse()       
+          props.productList.sort(compare('discount')).reverse()  
+          document.querySelector('.price__highlow').classList.remove("select")       
+          document.querySelector('.price__lowhigh').classList.remove("select")       
+          document.querySelector('.price__discount').classList.add("select")     
         }
         props.handleClick(props.productList)
         // props.renderItemCard(props.productList)
