@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "http://lalitdhiman1.github.io/shopping-cart-assignment",
   "scripts": {
-    "start": "webpack --hot --inline",
+    "start": "webpack --hot --inline", 
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "build": "webpack -p --config ./webpack.prod.config.js",
     "test": "mocha -w src/testSetup.js \"src/**/*.test.js\" --require ignore-styles",
