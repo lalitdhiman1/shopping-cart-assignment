@@ -31,7 +31,7 @@ function Sorting(props) {
           document.querySelector('.price__lowhigh').classList.remove("select")       
           document.querySelector('.price__discount').classList.add("select")     
         }
-        props.handleClick(props.productList) 
+        props.handleClick(props.productList)
         // props.renderItemCard(props.productList)
       }
 
