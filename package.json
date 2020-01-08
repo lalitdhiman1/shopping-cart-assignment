@@ -1,15 +1,18 @@
-{
+  {
   "name": "assign",
   "version": "1.0.1",
   "description": "Assignment adobe",
   "main": "index.js",
+  "homepage": "http://lalitdhiman1.github.io/shopping-cart-assignment",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
+    "start": "webpack --hot --inline",
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "build": "webpack -p --config ./webpack.prod.config.js",
-    "test": "mocha -w src/testSetup.js \"src/**/*.test.js\" --require ignore-styles"
+    "test": "mocha -w src/testSetup.js \"src/**/*.test.js\" --require ignore-styles",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "keywords": [],
+  "keywords": [], 
   "author": "",
   "license": "ISC",
   "dependencies": {
