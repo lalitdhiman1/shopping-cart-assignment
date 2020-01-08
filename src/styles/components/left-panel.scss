@@ -17,6 +17,14 @@
 		button.cancel__button {
 			display: none;
 		}
+		button.apply__button.desktop {
+			margin-top: 20px;
+		}
+		button.apply__button.mobile {
+			border-right: none;
+			border-bottom: none;
+			display: none;
+		}
 	}
 }
 @media only screen and (max-width: 767px) {

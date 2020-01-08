@@ -4,7 +4,7 @@
   "description": "Assignment adobe",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -p",
+    "start": "webpack-dev-server --hot --inline",
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "build": "webpack -p --config ./webpack.prod.config.js",
     "test": "mocha -w src/testSetup.js \"src/**/*.test.js\" --require ignore-styles"
@@ -29,8 +29,7 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "uglifyjs-webpack-plugin": "^1.2.0",
-    "webpack": "^4.41.5",
-    "webpack-dev-server": "^3.10.1" 
+    "webpack": "^3.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
@@ -50,7 +49,6 @@
     "eslint-plugin-react-redux": "^2.1.0",
     "expect": "^22.4.0",
     "file-loader": "^1.1.9",
-    "gh-pages": "^2.2.0",
     "ignore-styles": "^5.0.1",
     "jsdom": "^11.6.2",
     "mini-css-extract-plugin": "^0.9.0",
@@ -63,6 +61,8 @@
     "sass-loader": "^6.0.7",
     "sinon": "^4.3.0",
     "style-loader": "^0.20.3",
-    "url-loader": "^0.6.2"
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
